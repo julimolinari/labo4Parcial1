@@ -1,0 +1,28 @@
+<div>
+  <div class="h-100 p-5 text-white bg-dark rounded-3">
+    <h2>Detalle de la Pelicula</h2>
+    <div class="detalleBox" *ngIf="peliculaSeleccionada != undefined || peliculaSeleccionada != null ">
+
+      <div>
+        <p>Nombre: {{peliculaSeleccionada.nombre}}</p>
+        <p>Género: {{peliculaSeleccionada.tipo}}</p>
+        <p>Fecha de Estreno: {{peliculaSeleccionada.fechaDeEstreno}}</p>
+        <p>Cantidad de público:{{peliculaSeleccionada.cantidadDePublico}} </p>
+      </div>
+      <div>
+        <img [src]="peliculaSeleccionada.foto" alt="" width="100" height="160"
+          style="object-fit: cover; margin: 8px 0px;">
+
+      </div>
+    </div>
+    <div *ngIf="peliculaSeleccionada == undefined || peliculaSeleccionada == null ">
+      <p>Selecciona una pelicula de la lista para ver el detalle</p>
+    </div>
+
+    <div *ngIf="peliculaSeleccionada != undefined || peliculaSeleccionada != null ">
+
+      <!-- <button class="btn btn-outline-light" (click)="limpiar()" type="button">Limpiar</button> -->
+      <button class="btn btn-outline-light" (click)="borrarPelicula()" type="button">Borrar</button>
+    </div>
+  </div>
+</div>

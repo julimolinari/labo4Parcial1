@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ 
+  <body>
+    
+<main>
+  <div class="container py-4">
+    
+<app-tabla-pelicula (peliculaSeleccionada)="peliculaRecibida($event)"></app-tabla-pelicula>
+
+    <div class="row align-items-md-stretch">
+      <app-detalle-pelicula [peliculaSeleccionada]="this.peliculaSeleccionada" class="col-md-6"> </app-detalle-pelicula>
+      <div class="col-md-6">
+        <app-modificar-pelicula [peliculaSeleccionada]="this.peliculaSeleccionada"></app-modificar-pelicula>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      &copy; 2021
+    </footer>
+  </div>
+</main>
+
+
+    
+  </body>
+</html>

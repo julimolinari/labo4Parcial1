@@ -1,0 +1,38 @@
+<div>
+    <div class="h-100 p-5 text-white bg-dark rounded-3">
+      <h2>Modificar Pelicula</h2>
+      <div class="detalleBox" *ngIf="peliculaSeleccionada != undefined || peliculaSeleccionada != null ">
+  
+        <div>
+
+            <label for="firstName" class="form-label">Nombre de la Pelicula</label>
+            <input type="text" id="inputNombre" name="inputNombre" [(ngModel)]= "peliculaSeleccionada.nombre" placeholder="" value="" required>
+         
+            <label for="firstName" class="form-label">Género de la Pelicula</label>
+            <input type="text" id="inputNombre" name="inputNombre" [(ngModel)]= "peliculaSeleccionada.tipo" placeholder="" value="" required>
+         
+            <label for="firstName" class="form-label">Fecha de Estreno</label>
+            <input type="text" id="inputNombre" name="inputNombre" [(ngModel)]= "peliculaSeleccionada.fechaDeEstreno" placeholder="" value="" required>
+         
+            <label for="firstName" class="form-label">Cantidad de público</label>
+            <input type="text" id="inputNombre" name="inputNombre" [(ngModel)]= "peliculaSeleccionada.cantidadDePublico" placeholder="" value="" required>
+         
+            
+        </div>
+        <div>
+          <img [src]="peliculaSeleccionada.foto" alt="" width="100" height="160"
+            style="object-fit: cover; margin: 8px 0px;">
+  
+        </div>
+      </div>
+      <div *ngIf="peliculaSeleccionada == undefined || peliculaSeleccionada == null ">
+        <p>Selecciona una pelicula para modificar</p>
+      </div>
+  
+      <div *ngIf="peliculaSeleccionada != undefined || peliculaSeleccionada != null ">
+  
+        <button class="btn btn-outline-light" (click)="confirmar()" type="button">Confirmar</button>
+       
+      </div>
+    </div>
+  </div>

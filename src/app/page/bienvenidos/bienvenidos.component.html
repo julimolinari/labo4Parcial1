@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+  <body>
+    
+
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Información de Github</h1>
+        <div *ngIf="miInfo != undefined">
+
+            <div>
+                <p>Login: {{miInfo.login}}</p>
+                <p>Followers: {{miInfo.followers}}</p>
+                <p>Fecha de Ingreso: {{miInfo.created_at}}</p>
+                <p>Avatar:</p>
+                <img [src]="miInfo.avatar_url" alt="" width="100" height="160"
+                style="object-fit: cover; margin: 8px 0px;">
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+
+
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

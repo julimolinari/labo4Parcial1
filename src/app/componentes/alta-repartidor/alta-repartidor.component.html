@@ -1,0 +1,96 @@
+<body>
+
+
+    <div class="container">
+        <form [formGroup]="forma" (ngSubmit)="aceptar()">
+
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <h1>Ingrese un Repartidor</h1>
+                </div>
+            </div>
+            <div class="row formulario">
+                <div class="col-md-6 mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre"
+                        formControlName="nombre">
+                    <small class="invalid"
+                        *ngIf="forma.get('nombre')?.errors?.required && forma.get('nombre')?.touched">El
+                        nombre es requerido</small>
+                    <small class="invalid"
+                        *ngIf="forma.get('nombre')?.errors?.contieneEspacios && forma.get('nombre')?.touched">El nombre
+                        no
+                        debe tener espacios</small>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="DNI" class="form-label">DNI</label>
+                    <input type="text" class="form-control" id="DNI" placeholder="Ingrese DNI" formControlName="DNI">
+                    <small class="invalid" *ngIf="forma.get('DNI')?.errors?.required && forma.get('DNI')?.touched">El
+                        DNI es
+                        requerido</small>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" id="edad" placeholder="Ingrese edad"
+                        formControlName="edad">
+                    <small class="invalid" *ngIf="forma.get('edad')?.errors?.required && forma.get('edad')?.touched">La
+                        edad
+                        es requerida</small>
+                    <small class="invalid"
+                        *ngIf="forma.get('edad')?.errors?.min || forma.get('edad')?.errors?.max && forma.get('edad')?.touched">La
+                        edad debe ser 18-99 años</small>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="capacidad" class="form-label">Capacidad de Transporte</label>
+                    <input type="number" class="form-control" id="capacidad" placeholder="Ingrese capacidad"
+                        formControlName="capacidad">
+                    <small class="invalid"
+                        *ngIf="forma.get('capacidad')?.errors?.required && forma.get('capacidad')?.touched">La capacidad
+                        es requerida</small>
+                    <small class="invalid"
+                        *ngIf="forma.get('capacidad')?.errors?.min || forma.get('capacidad')?.errors?.max && forma.get('capacidad')?.touched">La
+                        capacidad debe estar 0-50</small>
+                </div>
+
+                <div class="col-12">
+                    <label for="paisSeleccionado" class="form-label">Pais de Origen <span
+                            class="text-muted">(Optional)</span></label>
+                    <div *ngIf="paisSeleccionado != undefined">
+                        <input type="text" class="form-control" id="paisSeleccionado" name="paisSeleccionado"
+                            placeholder="Seleccione un país de la lista" [(ngModel)]="paisSeleccionado.nombre"
+                            [ngModelOptions]="{standalone: true}" disabled>
+
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="col-md-12 mb-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" (click)="radio(true)" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Tengo unidad Propia
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" (click)="radio(false)" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            No tengo unidad Propia
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12 d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-block" 
+                        (click)='aceptar()'>
+                        Aceptar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="text-center">
+
+    <div class="card mx-auto" style="width: 18rem; margin-top: 110px;" id="tarjeta">
+        <main class="form-signin">
+            <form>
+               
+                <h1 class="h3 mb-3 fw-normal">Ingresa!</h1>
+            
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="floatingInput" name="floatingInput" placeholder="name@example.com" [(ngModel)]= "inputEmail">
+                  <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" name="floatingPassword" placeholder="Password" [(ngModel)]= "inputPass" >
+                  <label for="floatingPassword">Contraseña</label>
+                </div>
+            
+                <div class="checkbox mb-3">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Recordarme
+                  </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="button" (click)='iniciar()'>Iniciar Sesion</button>
+                <button class="w-45 btn btn-lg btn-secondary" type="button" (click)='volverhome()'>Volver</button>
+                <button class="w-45 btn btn-lg btn-warning" type="button" (click)='registro()'>Registrate!</button>
+
+                <button class="w-33 btn btn-sm btn-danger" type="button" (click)='ingresoRapido("admin")'>Admin</button>
+                <button class="w-33 btn btn-sm btn-danger" type="button" (click)='ingresoRapido("empleado")'>Empleado</button>
+                <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+              </form>
+          
+        </main>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
