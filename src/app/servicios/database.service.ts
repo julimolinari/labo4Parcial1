@@ -29,8 +29,10 @@ export class DatabaseService {
     console.log(peli);
     return this.db.collection("peliculas").doc(peli.id.toString()).set(peli.toJSON());
   }
+
+
   public crearRepartidor(repartidor : Repartidor){
-    
+    console.log("lo creo");
     return this.db.collection("repartidores").add(repartidor.ToJSON());
   }
 
@@ -41,6 +43,10 @@ export class DatabaseService {
 
   public getActores(){
     return this.db.collection("actores").snapshotChanges();
+  }
+
+  public getRepartidores(){
+    return this.db.collection("repartidores").snapshotChanges();
   }
 
 

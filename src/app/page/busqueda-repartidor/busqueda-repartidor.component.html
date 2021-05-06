@@ -1,0 +1,28 @@
+
+<!doctype html>
+<html lang="en">
+ 
+  <body>
+    
+<main>
+  <div class="container py-4">
+    
+<app-tabla-repartidor (repartidorSeleccionado)="repartidorRecibido($event)"></app-tabla-repartidor>
+
+    <div class="row align-items-md-stretch">
+      <app-detalle-repartidor [repartidorSeleccionado]="this.repartidorSeleccionado" class="col-md-6"> </app-detalle-repartidor>
+      <div class="col-md-6">
+        <!-- <app-modificar-repartidor [repartidorSeleccionado]="this.repartidorSeleccionado"></app-modificar-repartidor> -->
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      &copy; 2021
+    </footer>
+  </div>
+</main>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<div>
+    <div class="h-100 p-5 text-white bg-dark rounded-3">
+      <h2>Detalle del repartidor</h2>
+      <div class="detalleBox" *ngIf="repartidorSeleccionado != undefined || repartidorSeleccionado != null ">
+  
+        <div>
+          <p>Nombre: {{repartidorSeleccionado.nombre}}</p>
+          <p>Edad: {{repartidorSeleccionado.edad}}</p>
+          <p>Pais: {{repartidorSeleccionado.pais}}</p>
+          <p>Capacidad de Transporte: {{repartidorSeleccionado.capacidad}} </p>
+          <div *ngIf="repartidorSeleccionado.unidadPropia">
+            <p>Posee unidad propia: SI </p>
+          </div>
+          <div *ngIf="!repartidorSeleccionado.unidadPropia">
+            <p>Posee unidad propia: NO </p>
+          </div>
+          
+        </div>
+        <!-- <div>
+          <img [src]="repartidorSeleccionado.foto" alt="" width="100" height="160"
+            style="object-fit: cover; margin: 8px 0px;">
+  
+        </div> -->
+      </div>
+      <div *ngIf="repartidorSeleccionado == undefined || repartidorSeleccionado == null ">
+        <p>Selecciona una repartidor de la lista para ver el detalle</p>
+      </div>
+  
+      <div *ngIf="repartidorSeleccionado != undefined || repartidorSeleccionado != null ">
+  
+        <!-- <button class="btn btn-outline-light" (click)="limpiar()" type="button">Limpiar</button> -->
+        <!-- <button class="btn btn-outline-light" (click)="borrarrepartidor()" type="button">Borrar</button> -->
+      </div>
+    </div>
+  </div>

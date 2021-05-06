@@ -22,6 +22,10 @@ import { LoginComponent } from './page/login/login.component';
 import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repartidor.component';
 import { AltaComponent } from './page/alta/alta.component';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
+import { BusquedaRepartidorComponent } from './page/busqueda-repartidor/busqueda-repartidor.component';
+import { TablaRepartidorComponent } from './componentes/tabla-repartidor/tabla-repartidor.component';
+import { DetalleRepartidorComponent } from './componentes/detalle-repartidor/detalle-repartidor.component';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,7 @@ import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.co
     ModificarPeliculaComponent,
     LoginComponent,
     AltaRepartidorComponent,    
-    AltaComponent, TablaPaisesComponent
+    AltaComponent, TablaPaisesComponent, BusquedaRepartidorComponent, TablaRepartidorComponent, DetalleRepartidorComponent, DetallePaisComponent
   ],
   imports: [
     BrowserModule,

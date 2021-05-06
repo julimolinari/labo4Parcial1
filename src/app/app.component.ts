@@ -12,13 +12,13 @@ export class AppComponent {
   boton! : string;
   constructor(private aut : AutenticacionService){
 
-    aut.currentUser().then((resp:any) => {
-      if(resp.uid == null){
-       this.boton = "Login";
-      }else{
-        this.boton = "Cerrar Sesión";
-      }
-    })
+    // aut.currentUser().then((resp:any) => {
+    //   if(resp.uid == null){
+    //    this.boton = "Login";
+    //   }else{
+    //     this.boton = "Cerrar Sesión";
+    //   }
+    // })
   }
 
   cerrar(){

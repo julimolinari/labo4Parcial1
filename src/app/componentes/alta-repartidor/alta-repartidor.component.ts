@@ -46,7 +46,7 @@ export class AltaRepartidorComponent implements OnInit {
     // console.log(this.forma.controls['apellido'].value);
 
     let repartidor = new Repartidor(this.forma.get('nombre')!.value,this.forma.get('edad')!.value,this.forma.get('capacidad')!.value, this.paisSeleccionado.nombre,this.unidadPropia);
-
+    
     this.db.crearRepartidor(repartidor).then( ()=>{
 
       Swal.fire({
