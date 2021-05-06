@@ -4,15 +4,18 @@
     <a href="#" class="navbar-brand">Parcial Molinari</a>
     <div class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a routerLink="login" class="nav-link">login</a>
+        <a routerLink="login" class="nav-link">Login</a>
       </li>
       <li class="nav-item">
         <a routerLink="bienvenidos" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a routerLink="busqueda-peliculas" class="nav-link">Búsqueda de Peliculas</a>
+        <a (click)="cerrar()" class="nav-link">Cerrar sesion</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
+        <a routerLink="busqueda-peliculas" class="nav-link">Búsqueda de Peliculas</a>
+      </li> -->
+      <li class="nav-item" >
         <a routerLink="alta" class="nav-link">Alta Repartidor</a>
       </li>
     </div>
