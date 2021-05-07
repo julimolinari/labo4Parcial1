@@ -30,7 +30,7 @@ export class AltaRepartidorComponent implements OnInit {
       'DNI': ['', Validators.required],
       'edad': ['', [Validators.required, Validators.min(18), Validators.max(99)]],
       'capacidad': ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.maxLength(2)]],
-      'flexRadioDefault': ['', [Validators.required]],
+      
 
     });
   }
@@ -41,7 +41,7 @@ export class AltaRepartidorComponent implements OnInit {
 
 
   public aceptar() {
-
+    console.log("aceptar entre");
     let repartidor = new Repartidor(this.forma.get('nombre')!.value, this.forma.get('edad')!.value, this.forma.get('capacidad')!.value, this.paisSeleccionado, this.unidadPropia);
     console.log(repartidor);
     this.db.crearRepartidor(repartidor).then(() => {
@@ -54,6 +54,10 @@ export class AltaRepartidorComponent implements OnInit {
     }
     );
 
+  }
+
+  public hola(){
+    console.log("hola");
   }
 
   private spaceValidator(control: AbstractControl): null | object {

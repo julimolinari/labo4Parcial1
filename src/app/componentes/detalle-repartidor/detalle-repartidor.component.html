@@ -6,7 +6,7 @@
         <div>
           <p>Nombre: {{repartidorSeleccionado.nombre}}</p>
           <p>Edad: {{repartidorSeleccionado.edad}}</p>
-          <p>Pais: {{repartidorSeleccionado.pais}}</p>
+          <p>Pais: {{repartidorSeleccionado.pais.nombre}}</p>
           <p>Capacidad de Transporte: {{repartidorSeleccionado.capacidad}} </p>
           <div *ngIf="repartidorSeleccionado.unidadPropia">
             <p>Posee unidad propia: SI </p>
