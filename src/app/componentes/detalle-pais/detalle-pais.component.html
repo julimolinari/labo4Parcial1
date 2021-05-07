@@ -1,1 +1,21 @@
-<p>detalle-pais works!</p>
+<div>
+    <div class="h-100 p-5 text-white bg-dark rounded-3">
+      <h2>Detalle del Pais</h2>
+      <div class="detalleBox" *ngIf="paisSeleccionado != undefined || paisSeleccionado != null ">
+  
+        <div>
+          <p>Nombre: {{paisSeleccionado.pais.nombre}}</p>
+       
+        </div>
+        <div>
+          <img [src]="paisSeleccionado.pais.bandera" alt="" width="100" height="160"
+            style="object-fit: cover; margin: 8px 0px;">
+  
+        </div>
+      </div>
+      <div *ngIf="paisSeleccionado == undefined || paisSeleccionado == null ">
+        <p>Selecciona un Repartidor</p>
+      </div>
+  
+    </div>
+  </div>

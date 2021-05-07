@@ -1,14 +1,16 @@
+import { Pais } from "./pais";
+
 export class Repartidor {
 
 
     nombre! : string;
     edad! : number;    
     capacidad! : string;
-    pais! : string;
+    pais! : Pais;
     unidadPropia! : boolean;
 
 
-    constructor(nombre : string,edad: number,capacidad:string,pais:string,unidadPropia:boolean){
+    constructor(nombre : string,edad: number,capacidad:string,pais:Pais,unidadPropia:boolean){
         
         this.nombre = nombre;
         this.edad = edad;
